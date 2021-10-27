@@ -26,6 +26,9 @@ class MyHandler(FileSystemEventHandler):
 				os.rename(src, dest) #move file(s)
 
 
+				
+
+
 
 username = sys.argv[1] #parse param1 (source folder) from CLI
 collection_name = sys.argv[2] #parse param2 (destination folder) from CLI
@@ -33,6 +36,10 @@ src_folder = "/Users/"+username+"/Desktop"
 dest_folder = "/Users/"+username+"/Desktop/"+collection_name
 event_handler = MyHandler()
 event_logger = LoggingEventHandler()
+
+# Make sure our destination exists
+if not path.exist(dest_folder): 
+					os.mkdir(dest_folder)
 
 ## log changes
 logging.basicConfig(level=logging.INFO,
