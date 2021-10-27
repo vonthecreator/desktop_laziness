@@ -10,12 +10,12 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from watchdog.events import LoggingEventHandler
 
-import os, os.path
-from os import path
+import os 
 import logging
 import json
 import time
 import sys
+
 
 class MyHandler(FileSystemEventHandler): 
 	def on_modified(self, event):
@@ -36,10 +36,6 @@ src_folder = "/Users/"+username+"/Desktop"
 dest_folder = "/Users/"+username+"/Desktop/"+collection_name
 event_handler = MyHandler()
 event_logger = LoggingEventHandler()
-
-# Make sure our destination exists
-if not path.exist(dest_folder): 
-					os.mkdir(dest_folder)
 
 ## log changes
 logging.basicConfig(level=logging.INFO,
