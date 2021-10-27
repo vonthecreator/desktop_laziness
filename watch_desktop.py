@@ -10,12 +10,12 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from watchdog.events import LoggingEventHandler
 
-import os 
+import os, os.path
+from os import path
 import logging
 import json
 import time
 import sys
-import path
 
 class MyHandler(FileSystemEventHandler): 
 	def on_modified(self, event):
