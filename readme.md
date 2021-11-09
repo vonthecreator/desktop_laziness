@@ -16,3 +16,7 @@ NOTE: This entire project was designed for mac use only.
 
 
 > You can also add `&` at the end of the command so that it runs as a services in the background.
+
+
+
+
